@@ -29,20 +29,20 @@ public class Conejo extends Animal implements Reproducible {
             double aporte = p.serComida();
             setEnergia(getEnergia() + aporte);
             if (aporte < 0) {
-                System.out.println("Conejo '" + getNombre() + "' comió una planta venenosa! (" + aporte + " energía)");
+                //("Conejo '" + getNombre() + "' comió una planta venenosa! (" + aporte + " energía)");
             } else {
-                System.out.println("Conejo '" + getNombre() + "' comió '" + p.getNombre() + "' (+" + aporte + " energía)");
+                //("Conejo '" + getNombre() + "' comió '" + p.getNombre() + "' (+" + aporte + " energía)");
             }
         } else {
             setEnergia(getEnergia() - 15);
-            System.out.println("Conejo '" + getNombre() + "' no encontró comida (-15 energía)");
+            //("Conejo '" + getNombre() + "' no encontró comida (-15 energía)");
         }
     }
-
+    
     @Override
-    public void mostrarEstado() {
+    public String mostrarEstado() {
         String peligro = (getEnergia() < 20) ? " [PELIGRO: energía baja]" : "";
-        System.out.println("Conejo '" + getNombre() + "' | Energía: " + getEnergia() + peligro);
+        return "Conejo '" + getNombre() + "' | Energía: " + getEnergia() + peligro;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class Conejo extends Animal implements Reproducible {
             String nuevoNombre = "Conejo-" + (int)(Math.random() * 1000);
             Conejo nuevo = new Conejo(nuevoNombre, 40, getVelocidad(), getPeso());
             eco.agregarNacimientoConejo(nuevo);
-            System.out.println("Nació un nuevo conejo: " + nuevoNombre);
+            //("Nació un nuevo conejo: " + nuevoNombre);
         }
     }
 }

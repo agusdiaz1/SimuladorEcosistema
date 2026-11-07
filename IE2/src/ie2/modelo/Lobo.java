@@ -35,18 +35,18 @@ public class Lobo extends Animal implements Peligroso {
                 c.morir();
                 exitosCaza++;
                 setEnergia(getEnergia() + 30);
-                System.out.println("Lobo '" + getNombre() + "' cazó a Conejo '" + c.getNombre() + "' (+30 energía)");
+                //("Lobo '" + getNombre() + "' cazó a Conejo '" + c.getNombre() + "' (+30 energía)");
             } else {
-                System.out.println("Lobo '" + getNombre() + "' falló la caza.");
+                //("Lobo '" + getNombre() + "' falló la caza.");
             }
         } else {
-            System.out.println("Lobo '" + getNombre() + "' no encontró conejos para cazar.");
+            //("Lobo '" + getNombre() + "' no encontró conejos para cazar.");
         }
     }
 
     @Override
-    public void mostrarEstado() {
-        System.out.println("Lobo '" + getNombre() + "' | Energía: " + getEnergia() + " | Cacerías exitosas: " + exitosCaza);
+    public String mostrarEstado() {
+        return "Lobo '" + getNombre() + "' | Energía: " + getEnergia() + " | Cacerías exitosas: " + exitosCaza;
     }
 
     @Override

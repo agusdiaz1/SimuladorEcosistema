@@ -14,6 +14,7 @@ public class Ecosistema {
         private ArrayList<Planta> plantas;
         private ArrayList<Conejo> conejos;
         private ArrayList<Lobo> lobos;
+        private ArrayList<String> eventosTurno = new ArrayList<>();
         private Clima climaActual;
         private int turnoActual;
 
@@ -40,7 +41,7 @@ public class Ecosistema {
         agregarEntidad(tipo, 50.0);
     }
 
-    public void agregarEntidad(String tipo, double energiaInicial) {
+    public boolean agregarEntidad(String tipo, double energiaInicial) {
         tipo = tipo.toLowerCase();
         if (tipo.equals("planta")) {
             plantas.add(new Planta("Planta-" + (plantas.size() + 1), energiaInicial, 2));
@@ -50,16 +51,18 @@ public class Ecosistema {
             conejos.add(new Conejo("Conejo-" + (conejos.size() + 1), energiaInicial, 10, 2.5));
         } else if (tipo.equals("lobo")) {
             if (totalLobosAgregados >= 5) {
-                System.out.println("No se pueden agregar más de 5 lobos en toda la simulación.");
-                return;
+                return false;
             }
             lobos.add(new Lobo("Lobo-" + (lobos.size() + 1), energiaInicial, 15, 12.0));
             totalLobosAgregados++;
+            return true;
         }
+        return false;
     }
 
     public void procesarTurno() {
-        System.out.println("\n= TURNO " + turnoActual + "  Clima: " + climaActual + " =");
+        
+        //eventosTurno.Clear();
 
         for (Conejo c : conejos) {
             if (c.estaVivo()) c.setEnergia(c.getEnergia() + climaActual.getModEnergiaConejo());
@@ -121,17 +124,19 @@ public class Ecosistema {
         turnoActual++;
     }
 
-    public void mostrarEstado() {
-        System.out.println("Estado actual -> Plantas: " + contarPlantasVivas() +
-                " Conejos: " + contarConejosVivos() +
-                " Lobos: " + contarLobosVivos());
+    public String mostrarEstado() {
+        return "Turno: " + (turnoActual -1) +
+                "| Clima: " + climaActual +
+                "| Plantas: " + contarPlantasVivas() +
+                "| Conejos: " + contarConejosVivos() +
+                "| Lobos: " + contarLobosVivos();
     }
 
     public boolean ecosistemaColapsado() {
         return contarPlantasVivas() == 0 || contarConejosVivos() == 0 || contarLobosVivos() == 0;
     }
 
-    public void generarReporteFinal(int turnosTotales) {
+   /* public void generarReporteFinal(int turnosTotales) {
         System.out.println("      REPORTE FINAL DE SIMULACIÓN      ");
 
         if (ecosistemaColapsado()) {
@@ -162,7 +167,7 @@ public class Ecosistema {
         if (mejorLobo != null) {
             System.out.println("\nLobo con más cacerías exitosas: " + mejorLobo.getNombre() + " (" + mejorLobo.getExitosCaza() + " cacerías)");
         }
-    }
+    }*/
 
     private String obtenerMasLongevo(ArrayList<? extends Entidad> lista) {
         Entidad mayor = null;

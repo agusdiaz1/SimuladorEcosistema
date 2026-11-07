@@ -25,8 +25,8 @@ public class Planta extends Entidad implements Reproducible {
     }
 
     @Override
-    public void mostrarEstado() {
-        System.out.println("Planta '" + getNombre() + "' | Tamaño: " + tamaño + " | Energía: " + getEnergia());
+    public String mostrarEstado() {
+        return "Planta '" + getNombre() + "' | Tamaño: " + tamaño + " | Energía: " + getEnergia();
     }
 
     public double serComida() {
@@ -47,7 +47,7 @@ public class Planta extends Entidad implements Reproducible {
             String nuevoNombre = getNombre() + "-Hijo";
             Planta nueva = new Planta(nuevoNombre, 20 * factor, 1);
             eco.agregarNacimientoPlanta(nueva);
-            System.out.println("Planta '" + getNombre() + "' se reprodujo -> " + nuevoNombre);
+            //("Planta '" + getNombre() + "' se reprodujo -> " + nuevoNombre);
         }
     }
 
