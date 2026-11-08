@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package parcial1;
+package ie2.modelo;
 
 /**
  *
@@ -22,7 +22,7 @@ public abstract class Entidad {
     }
 
     public abstract void actuar(Ecosistema eco);
-    public abstract void mostrarEstado();
+    //public abstract void mostrarEstado();
 
     public void envejecer() {
         this.edad++;
