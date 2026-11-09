@@ -22,7 +22,7 @@ public abstract class Entidad {
     }
 
     public abstract void actuar(Ecosistema eco);
-    //public abstract void mostrarEstado();
+    public abstract String mostrarEstado();
 
     public void envejecer() {
         this.edad++;

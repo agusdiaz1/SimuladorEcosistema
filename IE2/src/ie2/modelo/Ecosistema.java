@@ -216,4 +216,32 @@ public class Ecosistema {
 
     public Clima getClimaActual() { return climaActual; }
     public void cambiarClima(Clima nuevo) { this.climaActual = nuevo; }
+    
+    // --- MÉTODOS PARA EL DAO (PERSISTENCIA) ---
+    public int getTurnoActual() {
+        return turnoActual;
+    }
+
+    public void setTurnoActual(int turnoActual) {
+        this.turnoActual = turnoActual;
+    }
+
+    public java.util.ArrayList<Planta> getPlantas() {
+        return plantas;
+    }
+
+    public java.util.ArrayList<Conejo> getConejos() {
+        return conejos;
+    }
+
+    public java.util.ArrayList<Lobo> getLobos() {
+        return lobos;
+    }
+
+    public void reiniciarEcosistema() {
+        this.plantas.clear();
+        this.conejos.clear();
+        this.lobos.clear();
+        this.turnoActual = 1;
+    }
 }
