@@ -58,4 +58,8 @@ public abstract class Entidad {
     public void setViva(boolean viva) {
         this.viva = viva;
     }
+    
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
 }

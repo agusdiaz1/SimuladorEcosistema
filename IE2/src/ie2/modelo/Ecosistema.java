@@ -217,8 +217,8 @@ public class Ecosistema {
     public Clima getClimaActual() { return climaActual; }
     public void cambiarClima(Clima nuevo) { this.climaActual = nuevo; }
     
-    // --- MÉTODOS PARA EL DAO (PERSISTENCIA) ---
-    public int getTurnoActual() {
+    //MÉTODOS PARA EL DAO
+   public int getTurnoActual() {
         return turnoActual;
     }
 
@@ -226,22 +226,52 @@ public class Ecosistema {
         this.turnoActual = turnoActual;
     }
 
-    public java.util.ArrayList<Planta> getPlantas() {
+    public ArrayList<Planta> getPlantas() {
         return plantas;
     }
 
-    public java.util.ArrayList<Conejo> getConejos() {
+    public ArrayList<Conejo> getConejos() {
         return conejos;
     }
 
-    public java.util.ArrayList<Lobo> getLobos() {
+    public ArrayList<Lobo> getLobos() {
         return lobos;
     }
+
+    public int getTotalNacimientosPlantas() { return totalNacimientosPlantas; }
+    public void setTotalNacimientosPlantas(int n) { this.totalNacimientosPlantas = n; }
+
+    public int getTotalMuertesPlantas() { return totalMuertesPlantas; }
+    public void setTotalMuertesPlantas(int n) { this.totalMuertesPlantas = n; }
+
+    public int getTotalNacimientosConejos() { return totalNacimientosConejos; }
+    public void setTotalNacimientosConejos(int n) { this.totalNacimientosConejos = n; }
+
+    public int getTotalMuertesConejos() { return totalMuertesConejos; }
+    public void setTotalMuertesConejos(int n) { this.totalMuertesConejos = n; }
+
+    public int getTotalNacimientosLobos() { return totalNacimientosLobos; }
+    public void setTotalNacimientosLobos(int n) { this.totalNacimientosLobos = n; }
+
+    public int getTotalMuertesLobos() { return totalMuertesLobos; }
+    public void setTotalMuertesLobos(int n) { this.totalMuertesLobos = n; }
+
+    public int getTotalLobosAgregados() { return totalLobosAgregados; }
+    public void setTotalLobosAgregados(int n) { this.totalLobosAgregados = n; }
 
     public void reiniciarEcosistema() {
         this.plantas.clear();
         this.conejos.clear();
         this.lobos.clear();
+        this.listasParaAgregarPlantas.clear();
+        this.listasParaAgregarConejos.clear();
         this.turnoActual = 1;
+        this.totalNacimientosPlantas = 0;
+        this.totalMuertesPlantas = 0;
+        this.totalNacimientosConejos = 0;
+        this.totalMuertesConejos = 0;
+        this.totalNacimientosLobos = 0;
+        this.totalMuertesLobos = 0;
+        this.totalLobosAgregados = 0;
     }
 }

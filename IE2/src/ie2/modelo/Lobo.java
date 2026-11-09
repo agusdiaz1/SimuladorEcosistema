@@ -57,4 +57,8 @@ public class Lobo extends Animal implements Peligroso {
     public int getExitosCaza() {
         return exitosCaza;
     }
+    
+    public void setExitosCaza(int exitosCaza) {
+        this.exitosCaza = exitosCaza;
+    }
 }
