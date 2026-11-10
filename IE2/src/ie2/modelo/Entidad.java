@@ -22,7 +22,7 @@ public abstract class Entidad {
     }
 
     public abstract void actuar(Ecosistema eco);
-    //public abstract void mostrarEstado();
+    public abstract String mostrarEstado();
 
     public void envejecer() {
         this.edad++;
@@ -57,5 +57,9 @@ public abstract class Entidad {
 
     public void setViva(boolean viva) {
         this.viva = viva;
+    }
+    
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 }
