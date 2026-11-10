@@ -4,17 +4,20 @@
  */
 package ie2;
 
-/**
- *
- * @author Agustina
- */
+import ie2.controlador.Controlador;
+import ie2.vista.FrmConfiguracion;
 public class IE2 {
-
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception ignored) {}
+
+        java.awt.EventQueue.invokeLater(() -> {
+            Controlador controlador = new Controlador();
+            FrmConfiguracion frmConfig = new FrmConfiguracion(controlador);
+            frmConfig.setVisible(true);
+        });
     }
     
 }

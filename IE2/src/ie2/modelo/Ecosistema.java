@@ -41,14 +41,21 @@ public class Ecosistema {
         agregarEntidad(tipo, 50.0);
     }
 
+    public boolean agregarEntidad(String tipo) {
+        return agregarEntidad(tipo, 50.0);
+    }
+
     public boolean agregarEntidad(String tipo, double energiaInicial) {
         tipo = tipo.toLowerCase();
         if (tipo.equals("planta")) {
             plantas.add(new Planta("Planta-" + (plantas.size() + 1), energiaInicial, 2));
+            return true;
         } else if (tipo.equals("planta venenosa")) {
             plantas.add(new PlantaVenenosa("PlantaVen-" + (plantas.size() + 1), energiaInicial, 2));
+            return true;
         } else if (tipo.equals("conejo")) {
             conejos.add(new Conejo("Conejo-" + (conejos.size() + 1), energiaInicial, 10, 2.5));
+            return true;
         } else if (tipo.equals("lobo")) {
             if (totalLobosAgregados >= 5) {
                 return false;
@@ -59,7 +66,6 @@ public class Ecosistema {
         }
         return false;
     }
-
     public void procesarTurno() {
         
         //eventosTurno.Clear();
