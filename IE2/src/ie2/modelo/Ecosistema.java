@@ -37,13 +37,11 @@ public class Ecosistema {
         this.turnoActual = 1;
     }
 
-    public void agregarEntidad(String tipo) {
+    public boolean agregarEntidad(String tipo) {
         agregarEntidad(tipo, 50.0);
+            return false;
     }
 
-    public boolean agregarEntidad(String tipo) {
-        return agregarEntidad(tipo, 50.0);
-    }
 
     public boolean agregarEntidad(String tipo, double energiaInicial) {
         tipo = tipo.toLowerCase();
