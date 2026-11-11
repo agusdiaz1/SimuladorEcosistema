@@ -34,6 +34,8 @@ public class FrmReporte extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(102, 153, 0));
+
         jLabel1.setText("REPORTE FINAL");
 
         jTextArea1.setColumns(20);
@@ -58,6 +60,7 @@ public class FrmReporte extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
         jButton1.setText("CERRAR");
         jButton1.setName("btnCerrar"); // NOI18N
         jButton1.addActionListener(this::jButton1ActionPerformed);
@@ -112,7 +115,7 @@ public class FrmReporte extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
- // </editor-fold>//GEN-END:initComponents
+ // </editor-fold>                        
     /**
      * @param args the command line arguments
      */
@@ -142,7 +145,6 @@ public class FrmReporte extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

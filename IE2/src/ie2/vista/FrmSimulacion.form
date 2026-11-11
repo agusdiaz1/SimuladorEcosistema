@@ -26,7 +26,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="473" max="32767" attributes="0"/>
+              <EmptySpace pref="467" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -34,13 +34,18 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="246" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="99" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -54,7 +59,6 @@
                           <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="11" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -81,6 +85,9 @@
       <SubComponents>
         <Container class="javax.swing.JPanel" name="jPanel5">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="ff" red="33" type="rgb"/>
+            </Property>
             <Property name="name" type="java.lang.String" value="pnlNorte" noResource="true"/>
           </Properties>
 
@@ -89,12 +96,12 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="105" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="71" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" pref="108" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" pref="110" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" pref="110" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" pref="110" max="-2" attributes="0"/>
@@ -108,15 +115,12 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel3" alignment="1" min="-2" pref="12" max="-2" attributes="0"/>
-                                  <Component id="jLabel1" alignment="1" min="-2" pref="12" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="jLabel2" alignment="3" max="32767" attributes="0"/>
+                              <Component id="jLabel1" alignment="3" min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="3" min="-2" pref="12" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -126,6 +130,10 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="99" red="33" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="PLANTAS"/>
                 <Property name="name" type="java.lang.String" value="lblTurno" noResource="true"/>
               </Properties>
               <AccessibilityProperties>
@@ -134,21 +142,34 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="99" green="99" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="CONEJOS"/>
                 <Property name="name" type="java.lang.String" value="lblClima" noResource="true"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
+                <Property name="text" type="java.lang.String" value="LOBOS"/>
                 <Property name="name" type="java.lang.String" value="lblPlantas" noResource="true"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="99" green="99" red="99" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="TURNO"/>
                 <Property name="name" type="java.lang.String" value="lblConejos" noResource="true"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="99" green="99" red="0" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="CLIMA"/>
                 <Property name="name" type="java.lang.String" value="lblLobos" noResource="true"/>
               </Properties>
             </Component>
@@ -253,6 +274,9 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="jButton5">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="cc" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Avanzar Turno"/>
                 <Property name="name" type="java.lang.String" value="btnAvanzar" noResource="true"/>
               </Properties>
@@ -262,6 +286,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton4">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="99" green="99" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cambiar Clima"/>
                 <Property name="name" type="java.lang.String" value="btnCambiarClima" noResource="true"/>
               </Properties>
@@ -271,6 +298,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton8">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="66" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Entidad A&#xf1;adir"/>
                 <Property name="name" type="java.lang.String" value="btnAgregarEntidad" noResource="true"/>
               </Properties>
@@ -280,6 +310,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton7">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="cc" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Omitir Intervenci&#xf3;n"/>
                 <Property name="name" type="java.lang.String" value="btnOmitir" noResource="true"/>
               </Properties>
